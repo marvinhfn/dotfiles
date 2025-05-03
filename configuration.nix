@@ -113,6 +113,7 @@
     netflix
     git
     inputs.nvix.packages.${pkgs.system}.full
+    spotify
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

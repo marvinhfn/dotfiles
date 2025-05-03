@@ -95,8 +95,9 @@
     ];
   };
 
-  # Install firefox.
+  # Install programms
   programs.firefox.enable = true;
+  programs.steam.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -108,6 +109,10 @@
   #  wget
     neovim
     fastfetch
+    vesktop
+    prismlauncher
+    netflix
+    git
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -118,6 +118,7 @@
         netflix
         git
         inputs.nvix.packages.${pkgs.system}.full
+        inputs.your-shell.packages.${pkgs.system}.default
         spotify
         kitty
         wofi

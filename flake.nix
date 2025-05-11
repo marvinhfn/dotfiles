@@ -7,6 +7,17 @@
             url = "github:nix-community/home-manager?ref=release-24.11";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        hyprland = {
+            type = "git";
+            url = "https://github.com/hyprwm/Hyprland";
+            ref = "refs/tags/v0.47.1";
+            submodules = true;
+        };
+        split-monitor-workspaces = {
+            type = "git";
+            url = "https://github.com/Duckonaut/split-monitor-workspaces";
+            inputs.hyprland.follows = "hyprland";
+        };
     };
     outputs = inputs: {
         nixosConfigurations.Reschner = inputs.nixpkgs.lib.nixosSystem {

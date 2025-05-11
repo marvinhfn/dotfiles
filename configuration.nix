@@ -58,6 +58,9 @@
     services.displayManager.sddm.enable = true;
     services.desktopManager.plasma6.enable = true;
 
+    services.dbus.enable = true;
+    security.polkit.enable = true;
+
     # Configure keymap in X11
     services.xserver.xkb = {
         layout = "de";
@@ -106,6 +109,7 @@
 
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
+    nixpkgs.overlays = [inputs.hyprland.overlays.default];
 
     # List packages installed in system profile. To search, run:
     # $ nix search wget
@@ -120,10 +124,21 @@
         inputs.nvix.packages.${pkgs.system}.full
         inputs.your-shell.packages.${pkgs.system}.default
         spotify
-        kitty
         wofi
+        polkit_gnome
+        ntfs3g
     ];
 
+    home-manager.users.${username}.programs.kitty = {
+        enable = true;
+        settings.confirm_os_window_close = 0;
+    };
+
+    fileSystems."/mnt/win" = {
+        device = "/dev/nvme0n1p2";
+        fsType = "ntfs-3g";
+        options = ["rw" "uid=1000" "gid=1000" "windows_names" "nofail"];
+    };
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
     # programs.mtr.enable = true;

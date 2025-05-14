@@ -833,17 +833,18 @@
         "nix-filter": "nix-filter"
       },
       "locked": {
-        "lastModified": 1746173444,
-        "narHash": "sha256-Qpd862a1+ram8NOx83XQmQ2PBznEXFtEHn7Npq84Bmo=",
-        "ref": "refs/heads/main",
-        "rev": "b91cf0a420680ed219ef252ce84375d3b3d7e870",
-        "revCount": 114,
-        "type": "git",
-        "url": "https://github.com/Duckonaut/split-monitor-workspaces"
+        "lastModified": 1743247927,
+        "narHash": "sha256-za6nKSilGOUpTDLho1LK8elyImLNNIUGixDLW/n6f84=",
+        "owner": "Duckonaut",
+        "repo": "split-monitor-workspaces",
+        "rev": "a8e39ff10dfb5ff451416a791a30388a8517e038",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://github.com/Duckonaut/split-monitor-workspaces"
+        "owner": "Duckonaut",
+        "repo": "split-monitor-workspaces",
+        "rev": "a8e39ff10dfb5ff451416a791a30388a8517e038",
+        "type": "github"
       }
     },
     "systems": {

@@ -129,9 +129,15 @@
         ntfs3g
     ];
 
-    home-manager.users.${username}.programs.kitty = {
-        enable = true;
-        settings.confirm_os_window_close = 0;
+    home-manager.users.${username} = {
+        home.sessionVariables = {
+            NIXOS_OZONE_WL = "1";
+            WLR_NO_HARDWARE_CURSORS = "1";
+        };
+        programs.kitty = {
+            enable = true;
+            settings.confirm_os_window_close = 0;
+        };
     };
 
     fileSystems."/mnt/win" = {

@@ -8,7 +8,7 @@
         enable = true;
         xwayland.enable = true;
     };
-    home-manager.users.${username} = {config, ...}: {
+   home-manager.users.${username} = {config, ...}: {
         xdg.configFile."hypr/extra.conf".source = config.lib.file.mkOutOfStoreSymlink "/home/${username}/.dotfiles/hyprland.conf";
         imports = [inputs.hyprland.homeManagerModules.default];
 
@@ -41,7 +41,7 @@
             # tell systemd to import environment by default (fixes screenshare)
             systemd.variables = ["--all"];
 
-            # plugins = [(inputs.split-monitor-workspaces.packages.${pkgs.system}.default)];
+            plugins = [(inputs.split-monitor-workspaces.packages.${pkgs.system}.default)];
         };
     };
     xdg.portal = {

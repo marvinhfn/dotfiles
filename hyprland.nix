@@ -30,10 +30,10 @@
                 source = ./extra.conf
                 plugin {
                     split-monitor-workspaces {
-                        count = 9
-                        keep_focused = -1
-                        enable_notifications = -1
-                        enable_persistent_workspaces = -1
+                        count = 10
+                        keep_focused = 0
+                        enable_notifications = 0
+                        enable_persistent_workspaces = 0
                     }
                 }
             '';

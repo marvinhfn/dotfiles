@@ -16,6 +16,7 @@
         ./hyprland.nix
         ./home-manager.nix
         ./git.nix
+        ./sunshine.nix
     ];
 
     # Bootloader.

@@ -15,6 +15,7 @@
         ./mapped_phrases.nix
         ./hyprland.nix
         ./home-manager.nix
+        ./git.nix
     ];
 
     # Bootloader.
@@ -55,8 +56,8 @@
     services.xserver.enable = true;
 
     # Enable the KDE Plasma Desktop Environment.
-    services.displayManager.sddm.enable = true;
-    services.desktopManager.plasma6.enable = true;
+    services.xserver.displayManager.gdm.enable = true;
+    services.xserver.desktopManager.gnome.enable = true;
 
     services.dbus.enable = true;
     security.polkit.enable = true;
@@ -109,7 +110,6 @@
 
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
-    nixpkgs.overlays = [inputs.hyprland.overlays.default];
 
     # List packages installed in system profile. To search, run:
     # $ nix search wget
@@ -170,6 +170,6 @@
     # this value at the release version of the first install of this system.
     # Before changing this value read the documentation for this option
     # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-    system.stateVersion = "24.11"; # Did you read the comment?
+    system.stateVersion = "25.05"; # Did you read the comment?
     nix.settings.experimental-features = ["nix-command" "flakes" "pipe-operators"];
 }

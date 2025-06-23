@@ -18,6 +18,7 @@
         ./git.nix
         ./sunshine.nix
         ./stylix.nix
+        ./wofi
     ];
 
     # Bootloader.
@@ -126,7 +127,6 @@
         inputs.nvix.packages.${pkgs.system}.full
         inputs.your-shell.packages.${pkgs.system}.default
         spotify
-        wofi
         polkit_gnome
         ntfs3g
     ];

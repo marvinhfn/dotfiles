@@ -17,6 +17,13 @@
             url = "github:Duckonaut/split-monitor-workspaces";
             inputs.hyprland.follows = "hyprland";
         };
+        stylix = {
+            url = "github:danth/stylix/release-25.05";
+            inputs = {
+                home-manager.follows = "home-manager";
+                nixpkgs.follows = "nixpkgs";
+            };
+        };
     };
     outputs = inputs: {
         nixosConfigurations.Reschner = inputs.nixpkgs.lib.nixosSystem {

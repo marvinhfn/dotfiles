@@ -17,6 +17,7 @@
         ./home-manager.nix
         ./git.nix
         ./sunshine.nix
+        ./stylix.nix
     ];
 
     # Bootloader.

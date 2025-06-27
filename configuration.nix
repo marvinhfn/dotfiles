@@ -78,7 +78,7 @@
     services.printing.enable = true;
 
     # Enable sound with pipewire.
-    hardware.pulseaudio.enable = false;
+    services.pulseaudio.enable = false;
     security.rtkit.enable = true;
     services.pipewire = {
         enable = true;
@@ -109,7 +109,12 @@
 
     # Install programms
     programs.firefox.enable = true;
-    programs.steam.enable = true;
+    programs.steam = {
+        enable = true;
+        package = pkgs.steam.override {
+            extraPkgs = pkgs: [pkgs.attr];
+        };
+    };
 
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;

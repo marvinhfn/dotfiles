@@ -19,6 +19,7 @@
         ./sunshine.nix
         ./stylix.nix
         ./wofi
+        ./hyprpanel.nix
     ];
 
     # Bootloader.

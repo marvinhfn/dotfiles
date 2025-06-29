@@ -8,7 +8,6 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         hyprpanel.url = "github:jas-singhfsu/hyprpanel";
-        hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
         hyprland = {
             type = "git";
             url = "https://github.com/hyprwm/Hyprland";

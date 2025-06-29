@@ -135,6 +135,7 @@
         spotify
         polkit_gnome
         ntfs3g
+        bluez
     ];
 
     home-manager.users.${username} = {
